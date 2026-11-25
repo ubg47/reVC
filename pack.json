@@ -1,0 +1,69 @@
+{
+ "reVC-data.data": {
+  "type": "application/octet-stream",
+  "size": 233652593,
+  "parts": [
+   {
+    "name": "reVC-data.data.00.br",
+    "size": 16607322,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.01.br",
+    "size": 8821990,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.02.br",
+    "size": 5158257,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.03.br",
+    "size": 5719371,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.04.br",
+    "size": 6072537,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.05.br",
+    "size": 6640918,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.06.br",
+    "size": 6223256,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.07.br",
+    "size": 6642621,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.08.br",
+    "size": 7229040,
+    "raw": 25165824
+   },
+   {
+    "name": "reVC-data.data.09.br",
+    "size": 1634837,
+    "raw": 7160177
+   }
+  ]
+ },
+ "reVC.wasm": {
+  "type": "application/wasm",
+  "size": 3378268,
+  "parts": [
+   {
+    "name": "reVC.wasm.br",
+    "size": 899293,
+    "raw": 3378268
+   }
+  ]
+ }
+}
