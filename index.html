@@ -408,13 +408,18 @@
     var q = /[?&]fps=(\d+)/.exec(location.search);
     Module.reVCMaxFPS = q ? +q[1] : (WEAK ? 30 : 60);     // frame cap, read by the game at start
     console.log('device: ' + (WEAK ? 'weak' : 'normal') + ', render ' + rs[0] + 'x' + rs[1] + ', fps cap ' + Module.reVCMaxFPS);
-    preparePack().then(function () {
-      Module.reVCLoadPackage();                           // data download starts now, in parallel with the engine
-      load('reVC-data.js', function () {
-        pickLanguage().then(function (lang) { Module['arguments'] = ['-lang', lang]; load('reVC.js'); });
-      });
-    }).catch(function (e) { showErr('pack: ' + e); });
-  }
+preparePack().then(function () {
+  return Module.reVCLoadPackage();
+}).then(function () {
+  load('reVC-data.js', function () {
+    pickLanguage().then(function (lang) {
+      Module['arguments'] = ['-lang', lang];
+      load('reVC.js');
+    });
+  });
+}).catch(function (e) {
+  fatal('Game loading failed: ' + e);
+});
   startGame();
   Module.canvas.addEventListener('click', function () {
     Module.canvas.focus();
