@@ -420,6 +420,7 @@ preparePack().then(function () {
 }).catch(function (e) {
   fatal('Game loading failed: ' + e);
 });
+  } // End of startGame()
   startGame();
   Module.canvas.addEventListener('click', function () {
     Module.canvas.focus();
